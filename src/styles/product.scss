@@ -1,5 +1,6 @@
 @import '../styles/blocks/card';
 @import '../styles/blocks/stars';
+@import '../styles/variables';
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap';
 
 * {
@@ -18,7 +19,7 @@ body {
 .container {
   display: grid;
 
-  grid-template-columns: repeat(1, 200px);
+  grid-template-columns: repeat(1, $product-width);
   gap: 48px 46px;
 
   justify-content: center;
@@ -27,19 +28,19 @@ body {
 
 @media (min-width: 488px) {
   .container {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, $product-width);
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, $product-width);
   }
 }
 
 @media (min-width: 1024px) {
   .container {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, $product-width);
   }
 }
 
@@ -52,7 +53,7 @@ body {
   }
 
   &__label {
-    color: #616070;
+    color: $hover-color;
     font-family: Roboto, sans-serif;
     font-size: 12px;
   }
@@ -70,7 +71,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  color: white;
+  color: $color-white;
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
@@ -86,11 +87,11 @@ body {
   background-color: $text-color;
   border: none;
   cursor: pointer;
+  transition-duration: 300ms;
 }
 
 .button:hover {
-  transition-duration: 300ms;
-  background-color: #fff;
+  background-color: $color-white;
   color: $text-color;
   border: 1px solid $text-color;
 }

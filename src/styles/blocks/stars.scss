@@ -4,19 +4,15 @@
   justify-content: space-between;
   margin-bottom: 24px;
 
-  &.stars--4 {
-    display: flex;
-  }
-
   &__wrapper {
     display: flex;
   }
 
   &__star {
     display: flex;
-    width: 16px;
-    height: 16px;
-    background-image: url('../images/star-active.svg');
+    width: $star-size;
+    height: $star-size;
+    background-image: url(../../src/images/star-active.svg);
     background-repeat: no-repeat;
     background-position: 50%;
     margin-right: 4px;
