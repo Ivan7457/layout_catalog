@@ -1,10 +1,12 @@
+$color-text: #060b35;
+
 .card {
   height: 408px;
   width: 200px;
   border: 1px solid #f3f3f3;
   border-radius: 5px;
   padding: 32px 16px 16px;
-  color: #060b35;
+  color: $color-text;
   transition-duration: 300ms;
 
   &__images {
